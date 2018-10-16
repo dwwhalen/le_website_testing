@@ -20,14 +20,14 @@ Feature: Users interact with the public Leading EDJE site
 
   Scenario Outline: Access the Ideas, Contact, and Events page
     When I visit the Leading EDJE Home page
-    And I click the <link_to_click> link
-    Then the <link_to_click> page is displayed
+    And I click the <page> link
+    Then the <page> page is displayed
     When I click the Home link
     Then the Home page is displayed
     Examples:
-    |link_to_click|
-    |Ideas        |
-    |Contact      |
-    |Events       |
+      | page    |
+      | Ideas   |
+      | Contact |
+      | Events  |
 
 
