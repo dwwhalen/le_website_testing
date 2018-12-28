@@ -38,3 +38,7 @@ And(/^I click the ([^"]*) link$/) do |link_to_click|
     fail(ArgumentError.new("Unexpected link to click: #{link_to_click}"))
   end
 end
+
+And(/^the page contains text "([^"]*)"$/) do |expected_text|
+  expect(on(IdeasPage).main_section_element.text).to include expected_text
+end
